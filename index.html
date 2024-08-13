@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Digital</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100%;
+        min-height: 100dvh;
+        box-sizing: border-box;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        color: white;
+        font-family: "Dosis";
+        font-size: 1rem; /* Tamaño de fuente base */
+      }
+      .div_gif {
+        background-color: transparent;
+      }
+      .video {
+        width: 100%;
+        max-width: 100%;
+        height: 100dvh;
+      }
+      h2 {
+        text-align: center;
+        padding: 5px 0 15px 0;
+        font-weight: bold;
+        font-size: 1.25rem; /* 20px en relación con el tamaño base */
+      }
+      .menu-card {
+        border-radius: 8px;
+        background-color: transparent;
+        box-shadow: 2px 2px 22px 5px white;
+        text-align: center;
+        padding: 25px;
+      }
+      p {
+        padding: 15px;
+        font-weight: bold;
+        font-size: 1rem; /* 15px en relación con el tamaño base */
+        text-align: left;
+      }
+      .menu-image {
+        max-width: 100%;
+        height: auto; /* Ajusta la imagen a la anchura del contenedor */
+      }
+
+      /* Media Queries para pantallas más pequeñas */
+      @media screen and (max-width: 1200px) {
+        .div_gif {
+          width: 100%;
+        }
+        .menu-card {
+          width: 60%;
+        }
+        p {
+          font-size: 2rem;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .menu-card {
+          width: 80%;
+        }
+        .menu-image {
+          width: 100%;
+          height: auto;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Tarjeta de video -->
+    <div class="div_gif">
+      <video
+        class="video"
+        src="video_dorilocos.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+    </div>
+
+    <!-- Tarjeta de hamburguesa -->
+    <div class="menu-card">
+      <h2>DORIHAMBURGUESA</h2>
+      <img
+        src="hamburguesa.gif"
+        alt="Hamburguesa"
+        class="menu-image"
+        loading="lazy"
+      />
+      <p>
+        Ingredientes: Carne de res, queso, lechuga, tomate, cebolla, pan de
+        hamburguesa.
+      </p>
+    </div>
+
+    <!-- Tarjeta de Doriloco -->
+    <div class="menu-card">
+      <h2>DORIPERRO</h2>
+      <img
+        src="Doriloco.gif"
+        alt="Doriloco"
+        class="menu-image"
+        loading="lazy"
+      />
+      <p>Ingredientes: Doritos, carne, queso, salsa especial, jalapeños.</p>
+    </div>
+
+    <!-- Tarjeta de menú 1 -->
+    <div class="menu-card">
+      <h2>MENÚ</h2>
+      <img src="menu.png" alt="Menú" class="menu-image" loading="lazy" />
+    </div>
+
+    <!-- Tarjeta de menú 2 -->
+    <div class="menu-card">
+      <img src="menu.png" alt="Menú" class="menu-image" loading="lazy" />
+    </div>
+  </body>
+</html>
